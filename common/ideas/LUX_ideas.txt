@@ -1,0 +1,18 @@
+ideas = {
+    country = {
+
+        alb_stab = {
+            allowed = {
+                original_tag = ALB
+            }
+
+            days = 100
+            #picture = 
+
+            modifier = {
+                stability_factor = 0.05
+            }
+        }
+
+    }
+}
