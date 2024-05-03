@@ -1,0 +1,86 @@
+focus_tree = {
+	id = LUX_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = LUX
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = LUX_com_nach
+		icon = GFX_goal_support_communism
+		mutually_exclusive = {focus = LUX_fach_nach focus = LUX_dem_nach}
+		cost = 10 #*7
+		x = 2
+		y = 0
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		available = {
+			communism > 0.05
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+			country_flag = LUX_com
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = LUX_dem_nach
+		icon = GFX_goal_support_democracy
+		mutually_exclusive = {focus = LUX_fach_nach focus = LUX_com_nach}
+		cost = 10 #*7
+		x = 6
+		y = 0
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		available = {
+			has_government = democratic
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+			country_flag = LUX_com
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = LUX_fach_nach
+		icon = GFX_focus_ger_reichskommisariats
+		mutually_exclusive = {focus = LUX_com_nach focus = LUX_dem_nach}
+		cost = 10 #*7
+		x = 10
+		y = 0
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		available = {
+			NOT = {
+				has_war_with = GER
+				has_government = communism
+			}
+			fascism > 0.05
+		}
+
+		completion_reward = {
+			add_stability = 0.05 
+		}
+	}
+}
