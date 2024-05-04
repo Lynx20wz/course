@@ -6,13 +6,11 @@ ideas = {
                 original_tag = ALB
             }
 
-            days = 100
-            #picture = 
+            picture = air_war_plans_division_focus
 
             modifier = {
-                stability_factor = 0.05
+                add_stability = 0.1
             }
         }
-
     }
 }
