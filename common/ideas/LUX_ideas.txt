@@ -9,7 +9,7 @@ ideas = {
             picture = air_war_plans_division_focus
 
             modifier = {
-                add_stability = 0.1
+                stability_factor = 0.1
             }
         }
     }

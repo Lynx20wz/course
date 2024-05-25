@@ -32,10 +32,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.2
-			}
+			ALB = {country_event = course.1}
 		}
 	}
 }

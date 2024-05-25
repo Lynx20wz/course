@@ -1,0 +1,36 @@
+add_namespace = course
+
+country_event = { #создание ивента
+    id = course.1 #id как у фокусов, идей и т.д (первая часть всегда должна содержать в себе namespace)
+    title = course.1.t #надпись ивентов сверху
+    desc = course.1.d #надпись в ивенте
+
+    is_triggered_only = yes #чтобы не мог взываться сам
+    fire_only_once = yes #может быть вызван один раз (команды не считаются)
+    picture = GFX_report_event_ast_planning #картинка в ивенте. Их можно найти в корне игры по пути "gfx\event_pictures"
+
+        
+    option = { #1-ый вариант 
+        name = course.1.a  #надпись на кнопке
+
+        create_wargoal = { #создать цель войны
+            type = annex_everything #тип войны
+            target = every_neighbor_country #против кого (в нашем случае все соседние страны)
+        }
+    }   
+    option = { #2-ой вариант
+        modifier = { #модификатор
+            add = 30 #сколько "очков шанса" добавить если...
+            ALB = { #Люксембруг...
+                   has_government = communism #имеет правительство коммунизм
+            }
+        }
+    name = course.1.b #надпись на кнопке
+
+    add_political_power = 50
+    }
+
+    
+}
+
+
